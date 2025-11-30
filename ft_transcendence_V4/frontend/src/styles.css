@@ -1,0 +1,86 @@
+/* src/styles.css */
+
+/* --- Reset basique --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Corps de la page --- */
+body {
+  background-color: #0b0611;
+  color: #fff;
+  font-family: monospace;
+}
+
+/* --- Conteneur principal --- */
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* --- Canvas Pong --- */
+canvas {
+  border: 2px solid #58a6ff;
+  background-color: #161b22;
+  margin-bottom: 20px;
+}
+
+/* --- Titre --- */
+h1 {
+  color: #4fc3f7;
+  text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+  margin-bottom: 20px;
+}
+
+/* --- Formulaire des joueurs --- */
+input {
+  padding: 6px 8px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  padding: 6px 10px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #238636;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2ea043;
+}
+
+/* --- Liste des joueurs --- */
+ul {
+  margin-top: 10px;
+  list-style-type: none;
+  width: 300px;
+}
+
+li {
+  padding: 4px 6px;
+  border-bottom: 1px solid #30363d;
+}
+
+/* --- Champ du joueur --- */
+#playerName {
+  width: 50px; /* ajuste la largeur selon ton besoin */
+}
+
+/* --- Alignement propre du champ + bouton d'ajout --- */
+form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}

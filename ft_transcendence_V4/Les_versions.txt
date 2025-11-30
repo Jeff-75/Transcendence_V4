@@ -1,0 +1,30 @@
+tout supprimer :    docker compose down --rmi all -v --remove-orphans
+                    docker system prune -af
+pour démarrer :     docker-compose up --build -d
+pour voir les bases de données : docker exec -it ft_backend sh puis sqlite3 /app/data/database.sqlite puis .tables puis .schema "nom_de_la_table"
+
+V0 - juste le docker
+V1 - le ping pong
+V2 - les joueurs
+V3 - Module 1 : Base de données (Backend)
+V4 - Module 2 : Single Player Pong + Tournoi local (avec Framework)
+V5 - Module 3 : ....
+
+
+Web — Backend avec framework (Major)
+Convertir ton mini-API PHP en un framework (Laravel / Slim / Symfony) et structurer des routes REST (/api/players, /api/tournaments, /api/match, /api/ai_move).
+
+Web — Frontend avec framework (Major)
+Transformer ton frontend Vite+TS en une app structurée (React ou Vue) : composants Game, PlayerList, Scoreboard, Tournament, Chat.
+
+User Management — Standard user management (Major)
+Inscription / login / profils (hash mot de passe, JWT ou sessions). Permet d’avoir joueurs persistants au lieu d’aliases temporaires.
+
+Gameplay — Remote players (Major) 
+Implémenter les parties en réseau via WebSocket (socket.io / ws). Les joueurs peuvent jouer depuis des machines différentes: matchmaking + rooms.
+
+AI-Algo — IA adversaire (Major)
+Améliorer /api/ai_move en une IA configurable (difficultés, même vitesse que joueur), utilisable en mode solo.
+
+Cybersecurity — 2FA + JWT (Major)
+Renforcer l’authentification (JWT + refresh tokens + option 2FA TOTP ou code par mail) pour sécuriser accès API et actions protégées.

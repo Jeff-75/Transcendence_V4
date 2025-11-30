@@ -1,0 +1,22 @@
+{
+  "name": "transcendence-backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "migrate": "npx knex migrate:latest --knexfile ./knexfile.cjs --env development"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/jwt": "^10.0.0",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.26.2",
+    "knex": "^2.5.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
